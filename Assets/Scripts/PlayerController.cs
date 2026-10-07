@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     public Vector3 MoveAction;
     private int moveSpeed = 5;
 
+    public InputAction interactAction;
+
     private Rigidbody playerRb;
 
     void Awake()
@@ -16,6 +18,11 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveAction = context.ReadValue<Vector3>();
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+
     }
 
     void HandlePlayerMovement()
