@@ -3,12 +3,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public InputAction MoveAction;
-
+    public Vector3 MoveAction;
     private int moveSpeed = 5;
 
-    Rigidbody playerRb;
-    BoxCollider playerCollider;
+    private Rigidbody playerRb;
+
+    void Awake()
+    {
+        playerRb = GetComponent<Rigidbody>();
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        MoveAction = context.ReadValue<Vector3>();
+    }
+
+    void HandlePlayerMovement()
+    {
+        playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
+    }
 
     void Start()
     {
@@ -18,5 +31,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void FixedUpdate()
+    {
+        HandlePlayerMovement();
     }
 }
