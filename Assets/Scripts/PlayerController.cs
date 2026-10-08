@@ -26,9 +26,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
+        if (!context.started) return;
+
         if (currentInteractable != null)
         {
-            Debug.Log("Interacted with object");
+            currentInteractable.Interact();
         }
     }
 
@@ -37,22 +39,12 @@ public class PlayerController : MonoBehaviour
         playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
     }
 
-    void SetInteractable(IInteractable interactable)
+    public void SetInteractable(IInteractable interactable)
     {
-        interactable = currentInteractable;
-    }
+        if (interactable == null) Debug.Log("Current interactable set to null");
+        else Debug.Log($"Current interactable set to {interactable}");
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<IInteractable>() != null)
-        {
-            SetInteractable(other.GetComponent<IInteractable>());
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        SetInteractable(null);
+        currentInteractable = interactable;
     }
 
     void Start()
