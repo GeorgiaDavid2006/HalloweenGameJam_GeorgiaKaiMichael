@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public InputAction interactAction;
 
-    public InteractableObject interactableObject;
+    public IInteractable currentInteractable = null;
 
     private Rigidbody playerRb;
 
@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        OnTriggerEnter(interactableObject.GetComponent<BoxCollider>());
+        if (currentInteractable != null)
+        {
+            Debug.Log("Interacted with object");
+        }
     }
 
     void HandlePlayerMovement()
@@ -34,12 +37,22 @@ public class PlayerController : MonoBehaviour
         playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
     }
 
+    void SetInteractable(IInteractable interactable)
+    {
+        interactable = currentInteractable;
+    }
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<InteractableObject>() != null)
+        if (other.gameObject.GetComponent<IInteractable>() != null)
         {
-            Debug.Log("Interacted with object");
+            SetInteractable(other.GetComponent<IInteractable>());
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        SetInteractable(null);
     }
 
     void Start()

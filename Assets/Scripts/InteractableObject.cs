@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour
+public class InteractableObject : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Interact()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.TryGetComponent(out PlayerController player)) 
+        {
+            player.currentInteractable = this;
+
+            Debug.Log("Object can be interacted with");
+        }
     }
 }
