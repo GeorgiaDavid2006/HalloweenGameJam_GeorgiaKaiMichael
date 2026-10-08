@@ -281,7 +281,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -473,11 +473,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 72b8c4f5-2468-4649-8092-67cfb02c469a
-    m_ActionName: 'PlayerInteraction/Interact[/Keyboard/enter]'
+    m_ActionId: dc9d0044-985a-48d0-8974-d97c1969c6d9
+    m_ActionName: 'PlayerMovement/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerMovement
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &315041104
