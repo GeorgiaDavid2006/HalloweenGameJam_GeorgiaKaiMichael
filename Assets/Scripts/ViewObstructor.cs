@@ -42,6 +42,7 @@ public class ViewObstructor : MonoBehaviour
                 TrackedElement element = new TrackedElement();
                 element.renderer = ren;
                 element.runtimeMaterial = ren.material;
+                ConfigureMaterialToTransparent(element.runtimeMaterial);
                 element.originalAlpha = element.runtimeMaterial.color.a;
                 walls.Add(element);
             }
@@ -53,6 +54,7 @@ public class ViewObstructor : MonoBehaviour
                 TrackedElement element = new TrackedElement();
                 element.renderer = ren;
                 element.runtimeMaterial = ren.material;
+                //ConfigureMaterialToTransparent(element.runtimeMaterial);
                 element.originalAlpha = element.runtimeMaterial.color.a;
                 objects.Add(element);
             }
@@ -171,5 +173,29 @@ public class ViewObstructor : MonoBehaviour
 
         // Restore original matrix so we don't mess up other gizmos in the scene
         Gizmos.matrix = originalMatrix;
+    }
+    private void ConfigureMaterialToTransparent(Material mat)
+    {
+        // For Universal Render Pipeline (URP)
+        if (mat.HasProperty("_Surface"))
+        {
+            mat.SetFloat("_Surface", 1); // 1 = Transparent, 0 = Opaque
+            mat.SetFloat("_ZWrite", 0);
+            mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            mat.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+        }
+        // For Standard Built-in Pipeline
+        else if (mat.HasProperty("_Mode"))
+        {
+            mat.SetFloat("_Mode", 2); // 2 = Fade Mode
+            mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+            mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+            mat.SetInt("_ZWrite", 0);
+            mat.DisableKeyword("_ALPHATEST_ON");
+            mat.EnableKeyword("_ALPHABLEND_ON");
+            mat.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+            mat.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+        }
     }
 }
