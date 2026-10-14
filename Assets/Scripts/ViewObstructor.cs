@@ -78,7 +78,18 @@ public class ViewObstructor : MonoBehaviour
             float targetAlpha = wall.originalAlpha;
 
             // Render wall invisible if closer to camera than player
-            if (localObjPos.z < localPlayerPos.z) targetAlpha = 0f;
+            if (localObjPos.z > 0 && localObjPos.z < localPlayerPos.z)
+            {
+                // Check if object is within the "view tunnel"
+                float diffX = Mathf.Abs(localObjPos.x - localPlayerPos.x);
+                float diffY = Mathf.Abs(localObjPos.y - localPlayerPos.y);
+
+                // If they are in the view tunnel:
+                if (diffX < tunnelRadiusX && diffY < tunnelRadiusY)
+                {
+                    targetAlpha = 0f;
+                }
+            }
 
             // Smoothly fade the material color
             Color curColor = wall.runtimeMaterial.color;
@@ -116,6 +127,7 @@ public class ViewObstructor : MonoBehaviour
 
             Color curColor = obj.runtimeMaterial.color;
             float newAlpha = Mathf.MoveTowards(curColor.a, targetAlpha, fadeSpeed * Time.deltaTime);
+
             obj.runtimeMaterial.color = new Color(curColor.r, curColor.g, curColor.b, newAlpha);
         }
 
@@ -143,7 +155,8 @@ public class ViewObstructor : MonoBehaviour
 
         // Define the bounding box center and size in local space
         // Center is halfway between camera (0,0,0) and the player's local Z depth
-        Vector3 localCenter = new Vector3(playerPosLocal.x, playerPosLocal.y, tunnelLength / 2f);
+        //Vector3 localCenter = new Vector3(playerPosLocal.x, playerPosLocal.y, tunnelLength / 2f);
+        Vector3 localCenter = new Vector3(0f, 0f, tunnelLength / 2f);
 
         // Full width/height is 2x the radius fields
         Vector3 localSize = new Vector3(tunnelRadiusX * 2f, tunnelRadiusY * 2f, tunnelLength);

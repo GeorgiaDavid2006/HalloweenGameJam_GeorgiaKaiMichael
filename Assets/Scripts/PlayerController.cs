@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     public IInteractable currentInteractable = null;
 
     private Rigidbody playerRb;
+    private Camera mainCamera;
 
     void Awake()
     {
         playerRb = GetComponent<Rigidbody>();
+        mainCamera = Camera.main;
 
         interactAction.Enable();
     }
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveAction = context.ReadValue<Vector3>();
+        Quaternion cameraYRotation = new Quaternion(0, mainCamera.transform.rotation.y, 0, mainCamera.transform.rotation.w);
+        MoveAction = cameraYRotation * MoveAction;
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -36,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerMovement()
     {
+
         playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
     }
 
@@ -49,12 +54,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
