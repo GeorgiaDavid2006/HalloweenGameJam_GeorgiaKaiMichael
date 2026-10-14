@@ -2,9 +2,25 @@ using UnityEngine;
 
 public class InteractableNPC : MonoBehaviour, IInteractable
 {
+    public DialogueManager dialogueManager;
+
+    public string[] sentences = null;
+
+    private void Awake()
+    {
+        dialogueManager = GetComponent<DialogueManager>();
+    }
+
     public void Interact()
     {
-        Debug.Log("Interacted with object");
+        if (dialogueManager.inDialogue == true)
+        {
+            dialogueManager.DisplayNextString();
+        }
+        else
+        {
+            dialogueManager.StartDialogue(sentences);
+        }
     }
 
     void OnTriggerEnter(Collider other)
