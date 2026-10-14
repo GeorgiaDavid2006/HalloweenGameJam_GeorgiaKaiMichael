@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour, IInteractable
+public class InteractablePickup : MonoBehaviour, IInteractable
 {
     public void Interact()
     {
@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour, IInteractable
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out PlayerController player)) 
+        if (other.gameObject.TryGetComponent(out PlayerController player))
         {
             player.SetInteractable(this);
         }
