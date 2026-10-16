@@ -25359,6 +25359,7 @@ GameObject:
   - component: {fileID: 9004377078351545079}
   - component: {fileID: 3738330113791507436}
   - component: {fileID: 3486679323536281096}
+  - component: {fileID: 9004377078351545080}
   m_Layer: 0
   m_Name: door.001
   m_TagString: Untagged
@@ -48579,6 +48580,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2100033580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9004377078351545080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506677309421762499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a036ad36a8e8e478a367d2f4f050ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
 --- !u!33 &9026134966620381398
 MeshFilter:
   m_ObjectHideFlags: 0
