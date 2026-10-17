@@ -89,7 +89,7 @@ public class ViewObstructor : MonoBehaviour
                 // If they are in the view tunnel:
                 if (diffX < tunnelRadiusX && diffY < tunnelRadiusY)
                 {
-                    targetAlpha = 0f;
+                    targetAlpha = 0.2f;
                 }
             }
 
