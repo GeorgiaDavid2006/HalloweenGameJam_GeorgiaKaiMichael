@@ -1,16 +1,35 @@
 using UnityEngine;
 
-public class LockedDoor : MonoBehaviour
+public class LockedDoor : MonoBehaviour, IInteractable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public PlayerController player;
+
+    public GameObject door;
+    public string keyID;
+
+    public void Interact()
     {
-        
+        if (player.keys.Contains(keyID))
+        {
+            player.SetInteractable(null);
+            Destroy(door);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.TryGetComponent(out PlayerController player))
+        {
+            player.SetInteractable(this);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out PlayerController player))
+        {
+            player.SetInteractable(null);
+        }
     }
 }

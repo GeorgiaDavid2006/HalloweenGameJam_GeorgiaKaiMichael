@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRb;
     private Camera mainCamera;
+
+    public List<string> keys;
 
     void Awake()
     {
