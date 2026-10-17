@@ -6398,7 +6398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6406,7 +6406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6418,7 +6418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952942940211852684, guid: fe988df9ef6c8084495455eb4cf79cc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -45226,6 +45226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   dialogueManager: {fileID: 106366484}
+  player: {fileID: 2026870387}
   sentences:
   - Hello there. You wish to escape this mansion?
   - Well, that is easy. All you must do is help the ghosts here, and they will give

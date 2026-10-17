@@ -3,6 +3,7 @@ using UnityEngine;
 public class InteractableNPC : MonoBehaviour, IInteractable
 {
     public DialogueManager dialogueManager;
+    public PlayerController player;
 
     public string[] sentences = null;
 
