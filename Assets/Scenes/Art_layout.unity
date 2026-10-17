@@ -5520,7 +5520,7 @@ MonoBehaviour:
   player: {fileID: 833393555}
   wallsParent: {fileID: 2100033580}
   objectsParent: {fileID: 1950837322}
-  tunnelRadiusX: 2
+  tunnelRadiusX: 5
   tunnelRadiusY: 2
   fadeSpeed: 5
   fullyInvisibleDistance: 1.5
