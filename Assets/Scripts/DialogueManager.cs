@@ -5,14 +5,13 @@ public class DialogueManager : MonoBehaviour
 {
     public Queue<string> dialogueQueue;
 
-    public UIManager uIManager;
+    public GameManager gameManager;
     public PlayerController playerController;
 
     public bool inDialogue = false;
 
     private void Awake()
     {
-        uIManager = GetComponent<UIManager>();
         playerController = GetComponent<PlayerController>();
 
         dialogueQueue = new Queue<string>();
@@ -20,7 +19,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string[] sentences)
     {
-        uIManager.ShowDialoguePanel();
+        GameManager.instance.uiManager.ShowDialoguePanel();
         inDialogue = true;
 
         foreach (string currentString in sentences)
@@ -41,14 +40,14 @@ public class DialogueManager : MonoBehaviour
         }
         else if (dialogueQueue.Count > 0)
         {
-            uIManager.SetDialogueText(dialogueQueue.Dequeue());
+            GameManager.instance.uiManager.SetDialogueText(dialogueQueue.Dequeue());
         }
     }
 
     private void EndDialogue()
     {
         dialogueQueue.Clear();
-        uIManager.HideDialoguePanel();
+        GameManager.instance.uiManager.HideDialoguePanel();
         inDialogue = false;
     }
 

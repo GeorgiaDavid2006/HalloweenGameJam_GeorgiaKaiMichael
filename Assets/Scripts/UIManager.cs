@@ -5,7 +5,6 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
-    
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
 

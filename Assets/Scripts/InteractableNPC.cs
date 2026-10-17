@@ -2,25 +2,20 @@ using UnityEngine;
 
 public class InteractableNPC : MonoBehaviour, IInteractable
 {
-    public DialogueManager dialogueManager;
+    public GameManager gameManager;
     public PlayerController player;
 
     public string[] sentences = null;
 
-    private void Awake()
-    {
-        dialogueManager = GetComponent<DialogueManager>();
-    }
-
     public void Interact()
     {
-        if (dialogueManager.inDialogue == true)
+        if (GameManager.instance.dialogueManager.inDialogue == true)
         {
-            dialogueManager.DisplayNextString();
+            GameManager.instance.dialogueManager.DisplayNextString();
         }
         else
         {
-            dialogueManager.StartDialogue(sentences);
+            GameManager.instance.dialogueManager.StartDialogue(sentences);
         }
     }
 
