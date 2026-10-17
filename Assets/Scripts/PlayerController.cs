@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public Vector3 MoveAction;
     private int moveSpeed = 5;
 
@@ -43,8 +45,14 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerMovement()
     {
-
-        playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
+        if (GameManager.instance.dialogueManager.inDialogue == true)
+        {
+            return;
+        }
+        else
+        {
+            playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     public void SetInteractable(IInteractable interactable)
