@@ -5,11 +5,21 @@ public class InteractableKey : MonoBehaviour, IInteractable
     public PlayerController player;
     public string KeyID;
 
+    public bool canGet = true;
+
     public void Interact()
     {
-        player.keys.Add(KeyID);
-        player.SetInteractable(null);
-        gameObject.SetActive(false);
+        if (canGet == true)
+        {
+            player.keys.Add(KeyID);
+            player.SetInteractable(null);
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            return;
+        }
+        
     }
 
     void OnTriggerEnter(Collider other)
