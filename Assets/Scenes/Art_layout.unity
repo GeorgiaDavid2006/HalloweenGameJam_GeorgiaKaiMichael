@@ -22551,6 +22551,8 @@ GameObject:
   - component: {fileID: 4053972910871985079}
   - component: {fileID: 4129997672867850350}
   - component: {fileID: 3683461235485296443}
+  - component: {fileID: 4129997672867850352}
+  - component: {fileID: 4129997672867850351}
   m_Layer: 0
   m_Name: ghost.006
   m_TagString: Untagged
@@ -24090,6 +24092,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3815018645378495626}
   m_Mesh: {fileID: 8869609693802009849, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+--- !u!136 &4129997672867850351
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815018645378495626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.023298634
+  m_Height: 0.029116483
+  m_Direction: 1
+  m_Center: {x: 0.00014529051, y: 0.004631157, z: 0.028447332}
+--- !u!114 &4129997672867850352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3815018645378495626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c49c76b974194449a5063ca1f118a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
+  gameManager: {fileID: 9044816}
+  player: {fileID: 2026870387}
+  sentences:
+  - Nobody here returns the books when they're done with them
 --- !u!4 &4141120383229379984
 Transform:
   m_ObjectHideFlags: 0
@@ -24647,8 +24688,10 @@ GameObject:
   - component: {fileID: 2956613753167514256}
   - component: {fileID: 8336391999111413936}
   - component: {fileID: 1809034823952472165}
+  - component: {fileID: 8336391999111413938}
+  - component: {fileID: 8336391999111413937}
   m_Layer: 0
-  m_Name: Cube.084
+  m_Name: book.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32714,8 +32757,10 @@ GameObject:
   - component: {fileID: 1898001178658222836}
   - component: {fileID: 775332715415673909}
   - component: {fileID: 6633947737242018685}
+  - component: {fileID: 6633947737242018687}
+  - component: {fileID: 6633947737242018686}
   m_Layer: 0
-  m_Name: Cube.085
+  m_Name: book.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34959,6 +35004,39 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6633947737242018686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140994140481917344}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0118135, y: 0.012927486, z: 0.019567356}
+  m_Center: {x: -0.00409325, y: 0.0035362563, z: -0.00021632202}
+--- !u!114 &6633947737242018687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140994140481917344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
 --- !u!23 &6639681737067951721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36209,8 +36287,10 @@ GameObject:
   - component: {fileID: 4789816723549179396}
   - component: {fileID: 7013723231927446738}
   - component: {fileID: 6052149031906607601}
+  - component: {fileID: 7013723231927446740}
+  - component: {fileID: 7013723231927446739}
   m_Layer: 0
-  m_Name: Cube.083
+  m_Name: book.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37063,6 +37143,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6850524677228110390}
   m_Mesh: {fileID: 4467766580757431414, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+--- !u!65 &7013723231927446739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850524677228110390}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0118135, y: 0.012927486, z: 0.019567356}
+  m_Center: {x: -0.00409325, y: 0.0035362563, z: -0.00021632202}
+--- !u!114 &7013723231927446740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850524677228110390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
 --- !u!4 &7016379904313170304
 Transform:
   m_ObjectHideFlags: 0
@@ -38822,8 +38935,10 @@ GameObject:
   - component: {fileID: 8934385355244874763}
   - component: {fileID: 777982542424149520}
   - component: {fileID: 7725258895971097601}
+  - component: {fileID: 8934385355244874764}
+  - component: {fileID: 8934385355244874765}
   m_Layer: 0
-  m_Name: Cube.082
+  m_Name: book.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44499,6 +44614,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4252702714979829099}
   m_Mesh: {fileID: 3043982841751899260, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+--- !u!65 &8336391999111413937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252702714979829099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.011813502, y: 0.012927487, z: 0.019567357}
+  m_Center: {x: -0.0040932503, y: 0.0035362565, z: -0.00021632205}
+--- !u!114 &8336391999111413938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252702714979829099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
 --- !u!4 &8337179334627359512
 Transform:
   m_ObjectHideFlags: 0
@@ -48535,6 +48683,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1950837322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8934385355244874764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361767072755631977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+--- !u!65 &8934385355244874765
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361767072755631977}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0118135, y: 0.012927486, z: 0.019567356}
+  m_Center: {x: -0.00409325, y: 0.0035362563, z: -0.00021632202}
 --- !u!1 &8945866270675066007
 GameObject:
   m_ObjectHideFlags: 0
