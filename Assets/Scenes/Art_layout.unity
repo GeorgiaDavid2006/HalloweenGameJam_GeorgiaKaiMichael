@@ -25042,6 +25042,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 9044816}
+    - target: {fileID: 3010657795360653992, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7405962462443537807, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
       propertyPath: m_Name
       value: main_character
