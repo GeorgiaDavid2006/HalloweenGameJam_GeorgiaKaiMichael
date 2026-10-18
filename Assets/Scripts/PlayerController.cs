@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Camera mainCamera;
 
     public List<string> keys;
+    public List<string> items;
 
     void Awake()
     {

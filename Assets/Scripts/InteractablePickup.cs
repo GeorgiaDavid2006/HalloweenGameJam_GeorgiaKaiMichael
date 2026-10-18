@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class InteractablePickup : MonoBehaviour, IInteractable
 {
+    public PlayerController player;
+    public string ItemID;
+
     public void Interact()
     {
-        Debug.Log("Interacted with object");
+        player.items.Add(ItemID);
+        player.SetInteractable(null);
+        gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
