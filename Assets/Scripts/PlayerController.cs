@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
 
     public Animator playerAnimator;
 
-    private int IsMovingHash = Animator.StringToHash("IsMoving");
-
     public List<string> keys;
     public List<string> items;
 
@@ -66,11 +64,11 @@ public class PlayerController : MonoBehaviour
     {
         if (MoveAction != Vector3.zero)
         {
-            playerAnimator.SetBool(IsMovingHash, true);
+            playerAnimator.SetBool("IsMoving", true);
         }
         else
         {
-            playerAnimator.SetBool(IsMovingHash, false);
+            playerAnimator.SetBool("IsMoving", false);
         }
     }
 
@@ -80,11 +78,6 @@ public class PlayerController : MonoBehaviour
         else Debug.Log($"Current interactable set to {interactable}");
 
         currentInteractable = interactable;
-    }
-
-    void Start()
-    {
-
     }
 
     void Update()
