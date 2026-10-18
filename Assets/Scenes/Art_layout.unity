@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a036ad36a8e8e478a367d2f4f050ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   door: {fileID: 1156423682767213096}
   keyID: Purple Key
 --- !u!1 &553059712
@@ -2265,17 +2265,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &841108606 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3010249064486331469, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-  m_PrefabInstance: {fileID: 4333987550115620327}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7944cf49c46d23a489ab4400f38627f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1 &856312803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a036ad36a8e8e478a367d2f4f050ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   door: {fileID: 4740792698631511122}
   keyID: Green Key
 --- !u!1 &946756444
@@ -3858,7 +3847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a036ad36a8e8e478a367d2f4f050ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   door: {fileID: 4506677309421762499}
   keyID: Blue Key
 --- !u!1 &1231035129
@@ -11264,7 +11253,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3133165292140008902, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+  - {fileID: 2100000, guid: a3de8a1a4b3e03e4383ca7b738e81ce5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23994,7 +23983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   sentences:
   - Nobody here returns the books when they're done with them...
 --- !u!4 &4141120383229379984
@@ -25022,79 +25011,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2095625876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4333987550115620327
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 281339221550749006, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: wallsParent
-      value: 
-      objectReference: {fileID: 2100033580}
-    - target: {fileID: 281339221550749006, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: objectsParent
-      value: 
-      objectReference: {fileID: 1950837322}
-    - target: {fileID: 3010249064486331469, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 9044816}
-    - target: {fileID: 3010657795360653992, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7405962462443537807, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_Name
-      value: main_character
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 92.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7893846096733232949, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b033b6a687e5ce94ea3005fe2727d770, type: 3}
 --- !u!33 &4345699341031452066
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34511,6 +34427,79 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -114784880553791439, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+--- !u!1001 &6530821068737596822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 52473209827870924, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672308618193075640, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 91.973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000025708414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.744106
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3341145541754791682, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974829270317114265, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: wallsParent
+      value: 
+      objectReference: {fileID: 2100033580}
+    - target: {fileID: 4974829270317114265, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: objectsParent
+      value: 
+      objectReference: {fileID: 1950837322}
+    - target: {fileID: 8850649113753689461, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 9044816}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
 --- !u!23 &6533893553698755788
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34976,7 +34965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   ItemID: Yellow Book
 --- !u!23 &6639681737067951721
 MeshRenderer:
@@ -35330,7 +35319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   sentences:
   - Man, I'm hungry...
   - I'm so hungry that I ate this key, but it didn't help at all...
@@ -37117,7 +37106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   ItemID: White Book
 --- !u!4 &7016379904313170304
 Transform:
@@ -39487,7 +39476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f6fb3ee1269ec449339cdaee1f4f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableKey
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   KeyID: Purple Key
   canGet: 1
 --- !u!65 &7494023661898252442
@@ -44612,7 +44601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   ItemID: Black Book
 --- !u!4 &8337179334627359512
 Transform:
@@ -45620,7 +45609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   sentences:
   - Hello there. You wish to escape this mansion?
   - Well, that is easy. All you must do is help the ghosts here.
@@ -47723,7 +47712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f6fb3ee1269ec449339cdaee1f4f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableKey
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   KeyID: Blue Key
   canGet: 1
 --- !u!33 &8800463401455208551
@@ -48142,7 +48131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f6fb3ee1269ec449339cdaee1f4f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableKey
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   KeyID: Green Key
   canGet: 0
 --- !u!4 &8864736272354900368
@@ -48662,7 +48651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 841108606}
+  player: {fileID: 0}
   ItemID: Orange Book
 --- !u!65 &8934385355244874765
 BoxCollider:
@@ -50231,4 +50220,4 @@ SceneRoots:
   - {fileID: 484464819}
   - {fileID: 106366483}
   - {fileID: 9044815}
-  - {fileID: 4333987550115620327}
+  - {fileID: 6530821068737596822}
