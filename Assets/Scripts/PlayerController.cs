@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     private Camera mainCamera;
 
+    public Animator playerAnimator;
+
+    private int IsMovingHash = Animator.StringToHash("IsMoving");
+
     public List<string> keys;
     public List<string> items;
 
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
+
+        playerAnimator = GetComponent<Animator>();
 
         interactAction.Enable();
     }
@@ -56,6 +62,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void HandlePlayerAnimations()
+    {
+        if (MoveAction != Vector3.zero)
+        {
+            playerAnimator.SetBool(IsMovingHash, true);
+        }
+        else
+        {
+            playerAnimator.SetBool(IsMovingHash, false);
+        }
+    }
+
     public void SetInteractable(IInteractable interactable)
     {
         if (interactable == null) Debug.Log("Current interactable set to null");
@@ -71,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        HandlePlayerAnimations();
     }
 
     void FixedUpdate()
