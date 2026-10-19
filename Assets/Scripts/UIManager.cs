@@ -5,6 +5,10 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject mainCamera;
+    public GameObject mainMenuScreen;
+
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
 
@@ -34,5 +38,12 @@ public class UIManager : MonoBehaviour
     public void SetDialogueText(string dialogueString)
     {
         dialogueText.text = dialogueString;
+    }
+
+    public void StartGame()
+    {
+        mainMenuScreen.SetActive(false);
+        player.SetActive(true);
+        mainCamera.SetActive(true);
     }
 }

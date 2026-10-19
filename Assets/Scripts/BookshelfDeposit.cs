@@ -6,17 +6,22 @@ public class BookshelfDeposit : MonoBehaviour, IInteractable
 
     public string itemID1;
     public string itemID2;
+    
+    public bool receivedBook = false;
+
     public void Interact()
     {
-        if (player.items.Contains(itemID1))
+        if (PlayerController.Instance.items.Contains(itemID1) && receivedBook == false)
         {
-            player.items.Remove(itemID1);
-            player.SetInteractable(null);
+            PlayerController.Instance.items.Remove(itemID1);
+            receivedBook = true;
+            PlayerController.Instance.SetInteractable(null);
         }
-        else if (player.items.Contains(itemID2))
+        else if (PlayerController.Instance.items.Contains(itemID2) && receivedBook == false)
         {
-            player.items.Remove(itemID2);
-            player.SetInteractable(null);
+            PlayerController.Instance.items.Remove(itemID2);
+            receivedBook = true;
+            PlayerController.Instance.SetInteractable(null);
         }
         else
         {
@@ -27,5 +32,21 @@ public class BookshelfDeposit : MonoBehaviour, IInteractable
     void Start()
     {
         player = PlayerController.Instance;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out PlayerController player))
+        {
+            player.SetInteractable(this);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out PlayerController player))
+        {
+            player.SetInteractable(null);
+        }
     }
 }
