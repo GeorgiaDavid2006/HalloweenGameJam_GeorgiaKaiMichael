@@ -2265,10 +2265,11 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &701261065 stripped
+--- !u!114 &701261065
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8850649113753689461, guid: 7b7c768b6f9696540b29980251a6080e, type: 3}
-  m_PrefabInstance: {fileID: 6530821068737596822}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -2276,6 +2277,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7944cf49c46d23a489ab4400f38627f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  gameManager: {fileID: 0}
+  MoveAction: {x: 0, y: 0, z: 0}
+  rotationSpeed: 5
+  interactAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ebaa4e01-2a24-422f-ab6a-f41bd4ff3e6e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  playerAnimator: {fileID: 0}
+  playerModel: {fileID: 0}
+  keys: []
+  items: []
 --- !u!1 &785177502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +2322,7 @@ Transform:
   m_GameObject: {fileID: 785177502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.412, y: 0.035, z: 0}
+  m_LocalPosition: {x: -0.412, y: -0.019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2326,7 +2343,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -19143,6 +19160,7 @@ GameObject:
   - component: {fileID: 328188061090726212}
   - component: {fileID: 7345795139094234272}
   - component: {fileID: 6876699323566254387}
+  - component: {fileID: 7345795139094234273}
   m_Layer: 0
   m_Name: bookshelf
   m_TagString: Untagged
@@ -26147,6 +26165,7 @@ GameObject:
   - component: {fileID: 9154720020491474026}
   - component: {fileID: 6665125041955182703}
   - component: {fileID: 504636135725141618}
+  - component: {fileID: 9154720020491474027}
   m_Layer: 0
   m_Name: bookshelf.003
   m_TagString: Untagged
@@ -28478,6 +28497,7 @@ GameObject:
   - component: {fileID: 7482239851068642004}
   - component: {fileID: 4606287373104224311}
   - component: {fileID: 5719847709626865335}
+  - component: {fileID: 7482239851068642005}
   m_Layer: 0
   m_Name: bookshelf.002
   m_TagString: Untagged
@@ -33259,6 +33279,7 @@ GameObject:
   - component: {fileID: 8840242433939007203}
   - component: {fileID: 4385737015273730560}
   - component: {fileID: 3496147939840338553}
+  - component: {fileID: 8840242433939007204}
   m_Layer: 0
   m_Name: bookshelf.001
   m_TagString: Untagged
@@ -40163,6 +40184,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2961869724485554974}
   m_Mesh: {fileID: 7214794309890079674, guid: f33077d78d0dc7646b0f3090eb0db0a6, type: 3}
+--- !u!114 &7345795139094234273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961869724485554974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162dc95da22eff84f964c8c23b850deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookshelfDeposit
+  player: {fileID: 2337915011463631075}
+  itemID1: White Book
+  itemID2: Yellow Book
 --- !u!4 &7354383112078540380
 Transform:
   m_ObjectHideFlags: 0
@@ -40760,6 +40796,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1950837322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7482239851068642005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4958452003867749982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162dc95da22eff84f964c8c23b850deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookshelfDeposit
+  player: {fileID: 2337915011463631075}
+  itemID1: White Book
+  itemID2: Yellow Book
 --- !u!33 &7489087329379892638
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -49503,6 +49554,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1950837322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8840242433939007204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6048166814444232497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162dc95da22eff84f964c8c23b850deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookshelfDeposit
+  player: {fileID: 2337915011463631075}
+  itemID1: Orange Book
+  itemID2: Black Book
 --- !u!4 &8840325783048886965
 Transform:
   m_ObjectHideFlags: 0
@@ -51520,6 +51586,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1950837322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9154720020491474027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450648710057116210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162dc95da22eff84f964c8c23b850deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BookshelfDeposit
+  player: {fileID: 2337915011463631075}
+  itemID1: Orange Book
+  itemID2: Black Book
 --- !u!23 &9160795836458873122
 MeshRenderer:
   m_ObjectHideFlags: 0
