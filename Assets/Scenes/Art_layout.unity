@@ -905,6 +905,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
   m_PrefabInstance: {fileID: 499048649}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &271942260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1955098614158487969, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+  m_PrefabInstance: {fileID: 1165055876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &271942264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271942260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.018720916, y: 0.021617047, z: 0.038159452}
+  m_Center: {x: -4.446044e-10, y: -9.552906e-11, z: 0.0090797255}
+--- !u!114 &271942265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271942260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Blue Flower
 --- !u!1 &373357030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1596,174 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &431827049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 431827050}
+  - component: {fileID: 431827053}
+  - component: {fileID: 431827052}
+  - component: {fileID: 431827051}
+  - component: {fileID: 431827054}
+  m_Layer: 0
+  m_Name: doorTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &431827050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431827049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.134, y: 0.346, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4060994735030870083}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &431827051
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431827049}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.046719667
+  m_Center: {x: 0.13168518, y: -0.32159543, z: 9.770474e-16}
+--- !u!23 &431827052
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431827049}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &431827053
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431827049}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &431827054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431827049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a036ad36a8e8e478a367d2f4f050ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
+  player: {fileID: 2337915011463631075}
+  door: {fileID: 5566523977519535400}
+  keyID: Yellow Key
+--- !u!1 &439611197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8433246704502862800, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+  m_PrefabInstance: {fileID: 1165055876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &439611201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439611197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.018720914, y: 0.02161705, z: 0.03919731}
+  m_Center: {x: -0.00000023857388, y: -5.325467e-10, z: 0.009598656}
+--- !u!114 &439611202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439611197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Yellow Flower
 --- !u!1 &447284342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,7 +2770,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499048650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
@@ -2576,7 +2784,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499048651}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
@@ -2590,7 +2798,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499048652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
@@ -2614,7 +2822,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.029987497, y: 0.042527594, z: 0.02025156}
   m_Center: {x: -0.0047270707, y: -0.014157199, z: 0.000025778787}
@@ -2635,7 +2843,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.09610159, y: 0.070835106, z: 0.11461214}
   m_Center: {x: 0.00898123, y: -0.025317602, z: -0.042758573}
@@ -4971,7 +5179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
   player: {fileID: 0}
   door: {fileID: 4740792698631511122}
-  keyID: Green Key
+  keyID: 
 --- !u!1 &946756444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5923,11 +6131,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7918459357155114947, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.13
+      value: 25.31
+      objectReference: {fileID: 0}
+    - target: {fileID: -7918459357155114947, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7918459357155114947, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.78
+      value: -10.68
       objectReference: {fileID: 0}
     - target: {fileID: -7918459357155114947, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5959,7 +6171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2845763001161280847, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.118
+      value: -36.76
       objectReference: {fileID: 0}
     - target: {fileID: 2845763001161280847, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5967,7 +6179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2845763001161280847, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.771
+      value: -39.96
       objectReference: {fileID: 0}
     - target: {fileID: 2845763001161280847, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5995,15 +6207,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4555227055460858942, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7349982
+      value: -49.1
       objectReference: {fileID: 0}
     - target: {fileID: 4555227055460858942, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4555227055460858942, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.229
+      value: -23.8
       objectReference: {fileID: 0}
     - target: {fileID: 4555227055460858942, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6054,7 +6266,25 @@ PrefabInstance:
     - {fileID: 9188612525093415229, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
     - {fileID: -2213620107329433, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4488712427479477653, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1261476358}
+    - targetCorrespondingSourceObject: {fileID: 4488712427479477653, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1261476359}
+    - targetCorrespondingSourceObject: {fileID: 8433246704502862800, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 439611202}
+    - targetCorrespondingSourceObject: {fileID: 8433246704502862800, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 439611201}
+    - targetCorrespondingSourceObject: {fileID: -1955098614158487969, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 271942265}
+    - targetCorrespondingSourceObject: {fileID: -1955098614158487969, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 271942264}
   m_SourcePrefab: {fileID: 100100000, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
 --- !u!1 &1191366236
 GameObject:
@@ -6968,6 +7198,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258637808}
   m_Mesh: {fileID: -5615950390926666935, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+--- !u!1 &1261476354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4488712427479477653, guid: f4ecb3b407b78c843b860f77d290e90a, type: 3}
+  m_PrefabInstance: {fileID: 1165055876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1261476358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261476354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Purple Flower
+--- !u!65 &1261476359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261476354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.018720921, y: 0.021617057, z: 0.036662668}
+  m_Center: {x: 6.4527626e-11, y: 0.0000000581298, z: 0.008331331}
 --- !u!114 &1261754303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8703,7 +8973,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.037678365, y: 0.0536146, z: 0.09341103}
   m_Center: {x: 0.008739141, y: 0.016707191, z: -0.032751728}
@@ -28561,7 +28831,8 @@ Transform:
   m_LocalPosition: {x: 258.2703, y: 0.028911352, z: -59.98004}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 431827050}
   m_Father: {fileID: 2100033580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4062542252817061130
@@ -28941,11 +29212,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 701261065}
-  itemID: 
+  foodItemID: 
+  collectibleItem1ID: 
+  collectibleItem2ID: 
+  collectibleItem3ID: 
   rewardID: 
   sentences:
   - Nobody here returns the books when they're done with them...
   alternateSentences: []
+  isKitchenGhost: 0
+  isGreenHouseGhost: 0
+  isLibraryGhost: 0
+  isPianistGhost: 0
 --- !u!4 &4141120383229379984
 Transform:
   m_ObjectHideFlags: 0
@@ -35236,6 +35514,7 @@ GameObject:
   - component: {fileID: 4060994735030870083}
   - component: {fileID: 3741225283654469979}
   - component: {fileID: 5890889591867302188}
+  - component: {fileID: 5890889591867302189}
   m_Layer: 0
   m_Name: door.014
   m_TagString: Untagged
@@ -36491,6 +36770,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5890889591867302189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566523977519535400}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.026240537, y: 0.005637982, z: 0.059722863}
+  m_Center: {x: -0.012919719, y: 0.0000039315773, z: 0.02963404}
 --- !u!23 &5896569101129160209
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38071,6 +38371,8 @@ GameObject:
   - component: {fileID: 3495515623368359261}
   - component: {fileID: 6174169682227915535}
   - component: {fileID: 6896637933006752850}
+  - component: {fileID: 6896637933006752852}
+  - component: {fileID: 6896637933006752853}
   m_Layer: 0
   m_Name: ghost.005
   m_TagString: Untagged
@@ -40726,8 +41028,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
-  player: {fileID: 0}
-  itemID: Cake
+  player: {fileID: 2337915011463631075}
+  foodItemID: Cake
+  collectibleItem1ID: 
+  collectibleItem2ID: 
+  collectibleItem3ID: 
   rewardID: Green Key
   sentences:
   - Man, I'm hungry...
@@ -40737,6 +41042,10 @@ MonoBehaviour:
   - Om nom nom nom...
   - Thank you so much! You can have this key!
   - Don't eat it though. It doesn't taste very good...
+  isKitchenGhost: 1
+  isGreenHouseGhost: 0
+  isLibraryGhost: 0
+  isPianistGhost: 0
 --- !u!136 &6684784036081337218
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41952,6 +42261,56 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6896637933006752852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174109293087940420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c49c76b974194449a5063ca1f118a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
+  gameManager: {fileID: 9044816}
+  player: {fileID: 2337915011463631075}
+  foodItemID: 
+  collectibleItem1ID: Yellow Flower
+  collectibleItem2ID: Blue Flower
+  collectibleItem3ID: Purple Flower
+  rewardID: Yellow Key
+  sentences:
+  - Oh dear...where did my flowers go?
+  - I know I had all three of them, right here.
+  alternateSentences:
+  - Oh! Why thank you!
+  - Here, have the key to the library. It's the least I can do.
+  isKitchenGhost: 0
+  isGreenHouseGhost: 1
+  isLibraryGhost: 0
+  isPianistGhost: 0
+--- !u!65 &6896637933006752853
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174109293087940420}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.019709418, y: 0.029116493, z: 0.04659727}
+  m_Center: {x: 0.00014529072, y: 0.004631159, z: 0.028447332}
 --- !u!33 &6898679602976572715
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51436,13 +51795,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 701261065}
-  itemID: 
+  foodItemID: 
+  collectibleItem1ID: 
+  collectibleItem2ID: 
+  collectibleItem3ID: 
   rewardID: 
   sentences:
   - Hello there. You wish to escape this mansion?
   - Well, that is easy. All you must do is help the ghosts here.
   - Once you help them, they will give you what you need to progress.
   alternateSentences: []
+  isKitchenGhost: 0
+  isGreenHouseGhost: 0
+  isLibraryGhost: 0
+  isPianistGhost: 0
 --- !u!136 &8444026109526125527
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -53845,10 +54211,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 0}
-  itemID: 
+  foodItemID: 
+  collectibleItem1ID: 
+  collectibleItem2ID: 
+  collectibleItem3ID: 
   rewardID: 
   sentences: []
   alternateSentences: []
+  isKitchenGhost: 0
+  isGreenHouseGhost: 0
+  isLibraryGhost: 0
+  isPianistGhost: 0
 --- !u!1 &8846456002929856897
 GameObject:
   m_ObjectHideFlags: 0
