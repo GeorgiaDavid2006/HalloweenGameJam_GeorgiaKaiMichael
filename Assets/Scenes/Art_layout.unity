@@ -24123,7 +24123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
-  player: {fileID: 0}
+  player: {fileID: 701261065}
   sentences:
   - Nobody here returns the books when they're done with them...
 --- !u!4 &4141120383229379984
@@ -35106,7 +35106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 0}
+  player: {fileID: 701261065}
   ItemID: Yellow Book
 --- !u!23 &6639681737067951721
 MeshRenderer:
@@ -37247,7 +37247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 0}
+  player: {fileID: 701261065}
   ItemID: White Book
 --- !u!4 &7016379904313170304
 Transform:
@@ -44742,7 +44742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 0}
+  player: {fileID: 701261065}
   ItemID: Black Book
 --- !u!4 &8337179334627359512
 Transform:
@@ -48813,7 +48813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
-  player: {fileID: 0}
+  player: {fileID: 701261065}
   ItemID: Orange Book
 --- !u!65 &8934385355244874765
 BoxCollider:
