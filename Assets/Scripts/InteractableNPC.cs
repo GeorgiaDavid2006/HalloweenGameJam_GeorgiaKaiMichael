@@ -6,6 +6,7 @@ public class InteractableNPC : MonoBehaviour, IInteractable
     public PlayerController player;
 
     public string itemID;
+    public string rewardID;
 
     public string[] sentences = null;
     public string[] alternateSentences = null;
@@ -21,6 +22,8 @@ public class InteractableNPC : MonoBehaviour, IInteractable
             if (GameManager.instance.dialogueManager.inDialogue == false && PlayerController.Instance.items.Contains(itemID))
             {
                 GameManager.instance.dialogueManager.StartDialogue(alternateSentences);
+                PlayerController.Instance.items.Remove(itemID);
+                PlayerController.Instance.keys.Add(rewardID);
             }
             else
             {

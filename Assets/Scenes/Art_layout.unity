@@ -2518,15 +2518,27 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8703710048744083975, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1985276865}
+    - targetCorrespondingSourceObject: {fileID: -8703710048744083975, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1985276869}
     - targetCorrespondingSourceObject: {fileID: 2345826329767711165, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499048655}
+    - targetCorrespondingSourceObject: {fileID: 2345826329767711165, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1759719064}
     - targetCorrespondingSourceObject: {fileID: -7173736321389944737, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499048654}
+    - targetCorrespondingSourceObject: {fileID: -7173736321389944737, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499048662}
     - targetCorrespondingSourceObject: {fileID: -4217864629626992091, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499048653}
+    - targetCorrespondingSourceObject: {fileID: -4217864629626992091, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499048659}
   m_SourcePrefab: {fileID: 100100000, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
 --- !u!1 &499048650 stripped
 GameObject:
@@ -2585,6 +2597,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
   player: {fileID: 2337915011463631075}
   ItemID: Flour
+--- !u!65 &499048659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048650}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.029987497, y: 0.042527594, z: 0.02025156}
+  m_Center: {x: -0.0047270707, y: -0.014157199, z: 0.000025778787}
+--- !u!65 &499048662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09610159, y: 0.070835106, z: 0.11461214}
+  m_Center: {x: 0.00898123, y: -0.025317602, z: -0.042758573}
 --- !u!1 &507269542
 GameObject:
   m_ObjectHideFlags: 0
@@ -8632,6 +8686,27 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!65 &1759719064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048652}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.037678365, y: 0.0536146, z: 0.09341103}
+  m_Center: {x: 0.008739141, y: 0.016707191, z: -0.032751728}
 --- !u!1 &1770614170
 GameObject:
   m_ObjectHideFlags: 0
@@ -9504,6 +9579,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
   player: {fileID: 2337915011463631075}
   ItemID: Cake
+--- !u!65 &1985276869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985276864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020055689, y: 0.038031057, z: 0.13316643}
+  m_Center: {x: -1.064868e-16, y: -0.00847163, z: 0.047170132}
 --- !u!1 &2036923870
 GameObject:
   m_ObjectHideFlags: 0
@@ -28845,8 +28941,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 701261065}
+  itemID: 
+  rewardID: 
   sentences:
   - Nobody here returns the books when they're done with them...
+  alternateSentences: []
 --- !u!4 &4141120383229379984
 Transform:
   m_ObjectHideFlags: 0
@@ -40628,9 +40727,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 0}
+  itemID: Cake
+  rewardID: Green Key
   sentences:
   - Man, I'm hungry...
   - I'm so hungry that I ate this key, but it didn't help at all...
+  alternateSentences:
+  - A cake?! For me?!?!
+  - Om nom nom nom...
+  - Thank you so much! You can have this key!
+  - Don't eat it though. It doesn't taste very good...
 --- !u!136 &6684784036081337218
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51330,10 +51436,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 701261065}
+  itemID: 
+  rewardID: 
   sentences:
   - Hello there. You wish to escape this mansion?
   - Well, that is easy. All you must do is help the ghosts here.
   - Once you help them, they will give you what you need to progress.
+  alternateSentences: []
 --- !u!136 &8444026109526125527
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -53736,7 +53845,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   gameManager: {fileID: 9044816}
   player: {fileID: 0}
+  itemID: 
+  rewardID: 
   sentences: []
+  alternateSentences: []
 --- !u!1 &8846456002929856897
 GameObject:
   m_ObjectHideFlags: 0
