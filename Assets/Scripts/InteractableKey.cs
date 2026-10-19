@@ -12,6 +12,14 @@ public class InteractableKey : MonoBehaviour, IInteractable
         player = PlayerController.Instance;
     }
 
+    private void Update()
+    {
+        if (PlayerController.Instance.keys.Contains(KeyID))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void Interact()
     {
         if (canGet == true)

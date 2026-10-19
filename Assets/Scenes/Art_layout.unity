@@ -4245,7 +4245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LockedDoor
   player: {fileID: 701261065}
   door: {fileID: 2361355800784619768}
-  keyID: 
+  keyID: Green Key
 --- !u!1 &854278784
 GameObject:
   m_ObjectHideFlags: 0
@@ -55170,6 +55170,7 @@ GameObject:
   - component: {fileID: 5792426328536251479}
   - component: {fileID: 4397915641669322601}
   - component: {fileID: 4297481942563652252}
+  - component: {fileID: 9001532158122630331}
   m_Layer: 0
   m_Name: counter
   m_TagString: Untagged
@@ -55177,6 +55178,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &9001532158122630331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001532158122630330}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15140735, y: 0.020020856, z: 0.02905584}
+  m_Center: {x: -0.06429632, y: -0.000010504723, z: 0.004527924}
 --- !u!4 &9004377078351545079
 Transform:
   m_ObjectHideFlags: 0
