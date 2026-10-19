@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     public GameManager gameManager;
 
     public Vector3 MoveAction;
     private int moveSpeed = 5;
+    [SerializeField] private float rotationSpeed = 5;
 
     public InputAction interactAction;
 
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Camera mainCamera;
 
     public Animator playerAnimator;
+    public Transform playerModel;
 
     public List<string> keys;
     public List<string> items;
@@ -28,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
         playerAnimator = GetComponent<Animator>();
 
+        Instance = this;
+
         interactAction.Enable();
     }
 
@@ -36,6 +42,8 @@ public class PlayerController : MonoBehaviour
         MoveAction = context.ReadValue<Vector3>();
         Quaternion cameraYRotation = new Quaternion(0, mainCamera.transform.rotation.y, 0, mainCamera.transform.rotation.w);
         MoveAction = cameraYRotation * MoveAction;
+
+        
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -57,6 +65,13 @@ public class PlayerController : MonoBehaviour
         else
         {
             playerRb.MovePosition(playerRb.position + MoveAction * moveSpeed * Time.fixedDeltaTime);
+        }
+
+        if (MoveAction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(MoveAction);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 

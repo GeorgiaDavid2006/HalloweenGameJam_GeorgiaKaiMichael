@@ -7,6 +7,11 @@ public class LockedDoor : MonoBehaviour, IInteractable
     public GameObject door;
     public string keyID;
 
+    private void Start()
+    {
+        player = PlayerController.Instance;
+    }
+
     public void Interact()
     {
         if (player.keys.Contains(keyID))

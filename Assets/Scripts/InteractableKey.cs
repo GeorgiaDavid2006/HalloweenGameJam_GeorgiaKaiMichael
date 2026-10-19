@@ -7,6 +7,11 @@ public class InteractableKey : MonoBehaviour, IInteractable
 
     public bool canGet = true;
 
+    private void Start()
+    {
+        player = PlayerController.Instance;
+    }
+
     public void Interact()
     {
         if (canGet == true)
