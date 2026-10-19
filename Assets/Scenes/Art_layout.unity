@@ -2514,8 +2514,77 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
       insertIndex: 20
       addedObject: {fileID: 393986597}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8703710048744083975, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1985276865}
+    - targetCorrespondingSourceObject: {fileID: 2345826329767711165, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499048655}
+    - targetCorrespondingSourceObject: {fileID: -7173736321389944737, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499048654}
+    - targetCorrespondingSourceObject: {fileID: -4217864629626992091, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 499048653}
   m_SourcePrefab: {fileID: 100100000, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+--- !u!1 &499048650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4217864629626992091, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+  m_PrefabInstance: {fileID: 499048649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &499048651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7173736321389944737, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+  m_PrefabInstance: {fileID: 499048649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &499048652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2345826329767711165, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+  m_PrefabInstance: {fileID: 499048649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &499048653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Sugar
+--- !u!114 &499048654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Milk
+--- !u!114 &499048655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499048652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Flour
 --- !u!1 &507269542
 GameObject:
   m_ObjectHideFlags: 0
@@ -9416,6 +9485,25 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &1985276864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8703710048744083975, guid: 41d4897ec84252d41921107022a3f7d5, type: 3}
+  m_PrefabInstance: {fileID: 499048649}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1985276865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985276864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec08e3eedffd58f4eb06f41efc1edbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractablePickup
+  player: {fileID: 2337915011463631075}
+  ItemID: Cake
 --- !u!1 &2036923870
 GameObject:
   m_ObjectHideFlags: 0
@@ -40563,9 +40651,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.023298636
-  m_Height: 0.029116495
+  m_Height: 0.054293416
   m_Direction: 1
-  m_Center: {x: 0.00014529256, y: 0.0046311594, z: 0.028447332}
+  m_Center: {x: 0.00014529229, y: 0.00078308344, z: 0.028447332}
 --- !u!4 &6693803519263131745
 Transform:
   m_ObjectHideFlags: 0

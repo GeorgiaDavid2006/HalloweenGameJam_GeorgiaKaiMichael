@@ -5,7 +5,10 @@ public class InteractableNPC : MonoBehaviour, IInteractable
     public GameManager gameManager;
     public PlayerController player;
 
+    public string itemID;
+
     public string[] sentences = null;
+    public string[] alternateSentences = null;
 
     public void Interact()
     {
@@ -15,7 +18,14 @@ public class InteractableNPC : MonoBehaviour, IInteractable
         }
         else
         {
-            GameManager.instance.dialogueManager.StartDialogue(sentences);
+            if (GameManager.instance.dialogueManager.inDialogue == false && PlayerController.Instance.items.Contains(itemID))
+            {
+                GameManager.instance.dialogueManager.StartDialogue(alternateSentences);
+            }
+            else
+            {
+                GameManager.instance.dialogueManager.StartDialogue(sentences);
+            }
         }
     }
 
