@@ -2,6 +2,7 @@ using System.Net.NetworkInformation;
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -40,10 +41,9 @@ public class UIManager : MonoBehaviour
         dialogueText.text = dialogueString;
     }
 
-    public void StartGame()
+    public void PlayButton()
     {
-        mainMenuScreen.SetActive(false);
-        player.SetActive(true);
-        mainCamera.SetActive(true);
+        SceneManager.LoadScene("Art_layout");
     }
+    
 }

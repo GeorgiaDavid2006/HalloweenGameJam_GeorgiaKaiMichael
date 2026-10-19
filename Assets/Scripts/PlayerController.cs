@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour
         MoveAction = context.ReadValue<Vector3>();
         Quaternion cameraYRotation = new Quaternion(0, mainCamera.transform.rotation.y, 0, mainCamera.transform.rotation.w);
         MoveAction = cameraYRotation * MoveAction;
-
-        
     }
 
     public void OnInteract(InputAction.CallbackContext context)
