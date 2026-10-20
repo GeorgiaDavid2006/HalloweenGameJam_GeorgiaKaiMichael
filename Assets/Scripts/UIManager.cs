@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject player;
     public GameObject mainCamera;
     public GameObject mainMenuScreen;
+    public GameObject controlsScreen;
 
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
@@ -44,6 +45,23 @@ public class UIManager : MonoBehaviour
     public void PlayButton()
     {
         SceneManager.LoadScene("Art_layout");
+    }
+
+    public void ControlsButton()
+    {
+        mainMenuScreen.SetActive(false);
+        controlsScreen.SetActive(true);
+    }
+
+    public void ReturnButton()
+    {
+        controlsScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
     }
     
 }
